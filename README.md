@@ -1,3 +1,5 @@
+!!!open read me on code view for better readability!!!
+
 this a library in c made to semulate the stls of c++ and work on diffrant datatypes to semulate the template of c++ but it still a prototype and not fully finished yet
 
 supported datatype for now INT CHAR FLOAT DOUBLE STRING
