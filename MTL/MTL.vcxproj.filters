@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\MTLS">
+      <UniqueIdentifier>{0ba5c562-9d75-4808-af56-18e33e4fe5c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MTLS\Node">
+      <UniqueIdentifier>{71615047-9e2d-4f9f-8dcb-ac455621fdd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MTLS\Stack">
+      <UniqueIdentifier>{138dc887-4057-4fdd-9b86-30b93557cf5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MTLS\Vector">
+      <UniqueIdentifier>{717871cd-0775-4aa5-bc6b-fcf3764a4667}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MTLS\Queue">
+      <UniqueIdentifier>{7a3422ae-5044-4d96-9c87-238419f75807}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MTLS\unorder_map">
+      <UniqueIdentifier>{1abcca9a-35bf-4dbc-8731-7f3ecc79ad15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MTLS\unorder_set">
+      <UniqueIdentifier>{78870bca-fefd-4918-b46a-edbaf8bc98b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MTLS\Deque">
+      <UniqueIdentifier>{7f337fad-4933-4db4-9325-fc253974e856}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\test">
+      <UniqueIdentifier>{fd17d865-533d-4b5a-9c57-f5244f8cc6c4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.c">
+      <Filter>Header Files\MTLS\Node</Filter>
+    </ClCompile>
+    <ClCompile Include="Stack.c">
+      <Filter>Header Files\MTLS\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="Queue.c">
+      <Filter>Header Files\MTLS\Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="Deque.c">
+      <Filter>Header Files\MTLS\Deque</Filter>
+    </ClCompile>
+    <ClCompile Include="unordered_map.c">
+      <Filter>Header Files\MTLS\unorder_map</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Node.h">
+      <Filter>Header Files\MTLS\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>Header Files\MTLS\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="DataType.h">
+      <Filter>Header Files\MTLS\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>Header Files\MTLS\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="Deque.h">
+      <Filter>Header Files\MTLS\Deque</Filter>
+    </ClInclude>
+    <ClInclude Include="unordered_map.h">
+      <Filter>Header Files\MTLS\unorder_map</Filter>
+    </ClInclude>
+    <ClInclude Include="test.h">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
