@@ -1,5 +1,3 @@
-!!!open read me on code view for better readability!!!
-
 this a library in c made to semulate the stls of c++ and work on diffrant datatypes to semulate the template of c++ but it still a prototype and not fully finished yet
 
 supported datatype for now INT CHAR FLOAT DOUBLE STRING
@@ -14,17 +12,17 @@ Stack*s = createStack(STRING);
 
 ###Stack functions###
 
-Stack* createStack(DataType type);   
-int isEmptyStack(Stack* stack);
-void PushStack(Stack* stack, void*data);
-void PopStackRet(Stack* stack,void*data);  ### pop calue with return ###
-void PopStack(Stack* stack);  ### pop with no return ###
-void TopStack(Stack* stack,void*data);
-int CopyStack(Stack* dest, Stack* src);
-int PrintStack(Stack* stack);
-int ReverseStack(Stack* stack);
-int StackSize(Stack* stack);
-void FreeStack(Stack* stack);
++ Stack* createStack(DataType type);   
++ int isEmptyStack(Stack* stack);
++ void PushStack(Stack* stack, void*data);
++ void PopStackRet(Stack* stack,void*data);  ### pop calue with return ###
++ void PopStack(Stack* stack);  ### pop with no return ###
++ void TopStack(Stack* stack,void*data);
++ int CopyStack(Stack* dest, Stack* src);
++ int PrintStack(Stack* stack);
++ int ReverseStack(Stack* stack);
++ int StackSize(Stack* stack);
++ void FreeStack(Stack* stack);
 
 
 ###Queue functions###
