@@ -10,7 +10,7 @@ Stack*s = createStack(INT);
 Stack*s = createStack(CHAR);
 Stack*s = createStack(STRING);
 
-###Stack functions###
+```###Stack functions###```
 
 + Stack* createStack(DataType type);   
 + int isEmptyStack(Stack* stack);
@@ -25,7 +25,7 @@ Stack*s = createStack(STRING);
 + void FreeStack(Stack* stack);
 
 
-###Queue functions###
+```###Queue functions###```
 
 + Queue* createQueue(DataType type);
 + int isEmptyQueue(Queue* queue);
@@ -38,7 +38,7 @@ Stack*s = createStack(STRING);
 + int QueueSize(Queue* queue);
 + void FreeQueue(Queue* queue);
 
-###Deque functions###
+```###Deque functions###```
 
 + Deque* createDeque(DataType type);
 + int isEmptyDeque(Deque* deque);
@@ -55,7 +55,7 @@ Stack*s = createStack(STRING);
 + int DequeSize(Deque* deque);
 + void FreeDeque(Deque* deque);
 
-### unordered_map functions ###    not fully finished or staible yet
+```### unordered_map functions ###    not fully finished or staible yet```
 
 + unordered_map* createUnordered_map(DataType typeKey,DataType typeValue);
 + int compare(DataType type,void*key1,void*key2);
