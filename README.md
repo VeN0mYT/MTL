@@ -16,7 +16,7 @@ you can do that for example
 + Stack* createStack(DataType type);   
 + int isEmptyStack(Stack* stack);
 + void PushStack(Stack* stack, void*data);
-+ void PopStackRet(Stack* stack,void*data);  ### pop calue with return ###
++ void PopStackRet(Stack* stack,void*data);  ### pop value with return ###
 + void PopStack(Stack* stack);  ### pop with no return ###
 + void TopStack(Stack* stack,void*data);
 + int CopyStack(Stack* dest, Stack* src);
@@ -31,7 +31,7 @@ you can do that for example
 + Queue* createQueue(DataType type);
 + int isEmptyQueue(Queue* queue);
 + void PushQueue(Queue* queue, void*data);
-+ void PopQueueRet(Queue* queue,void*data);  ### pop calue with return ###
++ void PopQueueRet(Queue* queue,void*data);  ### pop value with return ###
 + void PopQueue(Queue* queue);  ### pop with no return ###
 + void TopQueue(Queue* queue,void*data);
 + int CopyQueue(Queue* dest, Queue* src);
