@@ -59,12 +59,12 @@ you can do that for example
 ```### unordered_map functions ###    not fully finished or staible yet```
 
 + unordered_map* createUnordered_map(DataType typeKey,DataType typeValue);
-+ int compare(DataType type,void*key1,void*key2);
-+ int hash(void*key, DataType type);
-+ int isEmptyUnordered_map(unordered_map*unordered_map);
-+ void PutUnordered_map(unordered_map*unordered_map,void*key,void*value);
-+ void GetUnordered_map(unordered_map*unordered_map,void*key,void*value);
-+ void RemoveUnordered_map(unordered_map*unordered_map,void*key);    
-+ int CopyUnordered_map(unordered_map*dest,unordered_map*src);
-+ int FindUnordered_map(unordered_map*unordered_map,void*key);
-+ void FreeUnordered_map(unordered_map*unordered_map);
++ int compare(DataType type,void* key1,void* key2);
++ int hash(void* key, DataType type);
++ int isEmptyUnordered_map(unordered_map* unordered_map);
++ void PutUnordered_map(unordered_map* unordered_map,void* key,void* value);
++ void GetUnordered_map(unordered_map* unordered_map,void* key,void* value);
++ void RemoveUnordered_map(unordered_map* unordered_map,void* key);    
++ int CopyUnordered_map(unordered_map* dest,unordered_map* src);
++ int FindUnordered_map(unordered_map* unordered_map,void* key);
++ void FreeUnordered_map(unordered_map* unordered_map);
