@@ -27,43 +27,43 @@ Stack*s = createStack(STRING);
 
 ###Queue functions###
 
-Queue* createQueue(DataType type);
-int isEmptyQueue(Queue* queue);
-void PushQueue(Queue* queue, void*data);
-void PopQueueRet(Queue* queue,void*data);  ### pop calue with return ###
-void PopQueue(Queue* queue);  ### pop with no return ###
-void TopQueue(Queue* queue,void*data);
-int CopyQueue(Queue* dest, Queue* src);
-int PrintQueue(Queue* queue);
-int QueueSize(Queue* queue);
-void FreeQueue(Queue* queue);
++ Queue* createQueue(DataType type);
++ int isEmptyQueue(Queue* queue);
++ void PushQueue(Queue* queue, void*data);
++ void PopQueueRet(Queue* queue,void*data);  ### pop calue with return ###
++ void PopQueue(Queue* queue);  ### pop with no return ###
++ void TopQueue(Queue* queue,void*data);
++ int CopyQueue(Queue* dest, Queue* src);
++ int PrintQueue(Queue* queue);
++ int QueueSize(Queue* queue);
++ void FreeQueue(Queue* queue);
 
 ###Deque functions###
 
-Deque* createDeque(DataType type);
-int isEmptyDeque(Deque* deque);
-void HPushDeque(Deque* deque, void*data);  ### push in head ###
-void TPushDeque(Deque* deque, void*data);  ### push in tail ###
-void HPopDequeRet(Deque* deque, void*data);  ### pop from head with return value ###
-void TPopDequeRet(Deque* deque, void*data);  ### pop from tail with return value ###
-void HPopDeque(Deque* deque);  ### pop from head no return value ###
-void TPopDeque(Deque* deque);   ### pop from tail no return value ###
-void HTopDeque(Deque* deque, void*data);
-void TTopDeque(Deque* deque, void*data);
-int CopyDeque(Deque* dest, Deque* src);
-int PrintDeque(Deque* deque);
-int DequeSize(Deque* deque);
-void FreeDeque(Deque* deque);
++ Deque* createDeque(DataType type);
++ int isEmptyDeque(Deque* deque);
++ void HPushDeque(Deque* deque, void*data);  ### push in head ###
++ void TPushDeque(Deque* deque, void*data);  ### push in tail ###
++ void HPopDequeRet(Deque* deque, void*data);  ### pop from head with return value ###
++ void TPopDequeRet(Deque* deque, void*data);  ### pop from tail with return value ###
++ void HPopDeque(Deque* deque);  ### pop from head no return value ###
++ void TPopDeque(Deque* deque);   ### pop from tail no return value ###
++ void HTopDeque(Deque* deque, void*data);
++ void TTopDeque(Deque* deque, void*data);
++ int CopyDeque(Deque* dest, Deque* src);
++ int PrintDeque(Deque* deque);
++ int DequeSize(Deque* deque);
++ void FreeDeque(Deque* deque);
 
 ### unordered_map functions ###    not fully finished or staible yet
 
-unordered_map* createUnordered_map(DataType typeKey,DataType typeValue);
-int compare(DataType type,void*key1,void*key2);
-int hash(void*key, DataType type);
-int isEmptyUnordered_map(unordered_map*unordered_map);
-void PutUnordered_map(unordered_map*unordered_map,void*key,void*value);
-void GetUnordered_map(unordered_map*unordered_map,void*key,void*value);
-void RemoveUnordered_map(unordered_map*unordered_map,void*key);    
-int CopyUnordered_map(unordered_map*dest,unordered_map*src);
-int FindUnordered_map(unordered_map*unordered_map,void*key);
-void FreeUnordered_map(unordered_map*unordered_map);
++ unordered_map* createUnordered_map(DataType typeKey,DataType typeValue);
++ int compare(DataType type,void*key1,void*key2);
++ int hash(void*key, DataType type);
++ int isEmptyUnordered_map(unordered_map*unordered_map);
++ void PutUnordered_map(unordered_map*unordered_map,void*key,void*value);
++ void GetUnordered_map(unordered_map*unordered_map,void*key,void*value);
++ void RemoveUnordered_map(unordered_map*unordered_map,void*key);    
++ int CopyUnordered_map(unordered_map*dest,unordered_map*src);
++ int FindUnordered_map(unordered_map*unordered_map,void*key);
++ void FreeUnordered_map(unordered_map*unordered_map);
