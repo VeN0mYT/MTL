@@ -1,6 +1,6 @@
 this a library in c made to semulate the stls of c++ and work on diffrant datatypes to semulate the template of c++ but it still a prototype and not fully finished yet
 
-supported datatype for now ```INT CHAR FLOAT DOUBLE STRING```
+supported datatype for now ```INT CHAR FLOAT DOUBLE STRING``` iam thinking about make the ```stack queue etc..``` being a datatype too.
 
 !!! you have to assgine value in functions by (&) like ``` PushStack(s,&m); ``` if (int m = 5;) same when get a value (int x = 0;) ```TopStack(s,&x);```
 ```
