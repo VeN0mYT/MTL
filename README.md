@@ -6,9 +6,9 @@ supported datatype for now INT CHAR FLOAT DOUBLE STRING
 ```
 you can do that for example
 
-+ Stack*s = createStack(INT);
-+ Stack*s = createStack(CHAR);
-+ Stack*s = createStack(STRING);
+ Stack*s = createStack(INT);
+ Stack*s = createStack(CHAR);
+ Stack*s = createStack(STRING);
 ```
 
 ```###Stack functions###```
