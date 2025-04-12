@@ -3,12 +3,13 @@ this a library in c made to semulate the stls of c++ and work on diffrant dataty
 supported datatype for now INT CHAR FLOAT DOUBLE STRING
 
 !!! you have to assgine value in functions by (&) like  PushStack(s,&m);  if (int m = 5;) same when get a value (int x = 0;) TopStack(s,&x);
-
+```
 you can do that for example
 
-Stack*s = createStack(INT);
-Stack*s = createStack(CHAR);
-Stack*s = createStack(STRING);
++ Stack*s = createStack(INT);
++ Stack*s = createStack(CHAR);
++ Stack*s = createStack(STRING);
+```
 
 ```###Stack functions###```
 
