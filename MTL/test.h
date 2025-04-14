@@ -20,7 +20,7 @@ int isOperator(char c)
 	return 0;
 }
 
-void test1()
+void testPOSTFIX_PROGRAM()
 {
 	Stack* num = createStack(CHAR);
 	Stack* ope = createStack(CHAR);
@@ -126,7 +126,7 @@ void test1()
 	FreeStack(ans);
 }
 
-void test2()
+void testSTACK()
 {
 	Stack* s = createStack(INT);
 	for(int i = 0;i < 10;i++) PushStack(s, &i);
@@ -135,7 +135,7 @@ void test2()
 	FreeStack(s);
 }
 
-void test3()
+void testSTRING()
 {
 	Stack* s = createStack(STRING);
 	char str[] = "hello world";
@@ -148,17 +148,39 @@ void test3()
 	FreeStack(s);
 }
 
-void test4()
+void testMAP()
 {
 	unordered_map* map = createUnordered_map(CHAR, INT);
 	char m = 'a';
 	int x = 5;
+	x = 10;
+	PutUnordered_map(map, &m, &x);
 	PutUnordered_map(map, &m, &x);
 	int y = 0;
 	GetUnordered_map(map, &m, &y);
 	printf("%d\n", y);
 	FreeUnordered_map(map);
 
+}
+
+typedef struct PLAYER
+{
+	char name[20];
+	int score;
+}PLAYER;
+
+void testPTR()
+{
+	PLAYER* p = malloc(sizeof(PLAYER));
+	p->score = 10;
+
+	Stack* st = createStack(POINTER);
+	PushStack(st, &p);
+	void* get = NULL;
+	PLAYER* p2 = NULL;
+	PopStackRet(st, &get);
+	p2 = (PLAYER*)get;
+	printf("%d", p2->score);
 }
 
 #endif // !TEST_H

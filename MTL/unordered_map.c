@@ -29,7 +29,15 @@ int compare(DataType type, void* key1, void* key2)
 		case STRING:
 			if (strcmp((char*)key1, (char*)key2) == 0) return 1;
 			break;
+		case STACK:
+			if (*(Stack**)key1 == *(Stack**)key2) return 1;
+			break;
+		case POINTER:													// stack and pointer still need to be tested!!!
+			if (*(void**)key1 == *(void**)key2) return 1;
+			break;
 	default:
+		printf("this data type is not supported to be compared\n");
+		exit(EXIT_FAILURE);
 		break;
 	}
 	return 0;
@@ -53,6 +61,7 @@ int hash(void* key, DataType type)
 			break;
 		default:
 			h = (size_t)key % MAX;  
+			break;
 		}
 		return h % MAX;
 }
@@ -149,6 +158,7 @@ int FindUnordered_map(unordered_map* unordered_map, void* key)
 	return 0;
 }
 
+int Unordered_MapSize(unordered_map* unordered_map) { return unordered_map->size; }
 void FreeUnordered_map(unordered_map* unordered_map)
 {
 	for (int i = 0;i < MAX;i++)

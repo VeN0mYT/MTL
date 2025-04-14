@@ -11,7 +11,8 @@ typedef enum DataType
 	DOUBLE,
 	CHAR,
 	STRING,
-	STACK  //not working yet
+	STACK,  // work but a prototype
+	POINTER // under testing
 }DataType;
 //normal node
 typedef struct Node {

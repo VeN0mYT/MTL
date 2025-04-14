@@ -1,5 +1,5 @@
 #include "Node.h"
-
+#define UNIDENTIFIED 0x100000000045;
 void DataTemplet(DataType type, Node*node, void* data)
 {
 	switch (type)
@@ -34,12 +34,14 @@ void DataTemplet(DataType type, Node*node, void* data)
 		node->size = strlen(data);
 		break;
 	case STACK:
-		node->data = malloc(sizeof(Stack*));  
-		if (node->data) {
-			*(Stack**)node->data = (Stack*)data;  //need fix show garpage value
-		}
+		node->data = data;
 		node->type = STACK;
 		node->size = sizeof(Stack*);
+		break;
+	case POINTER:
+		node->data = data;
+		node->type = POINTER;
+		node->size = UNIDENTIFIED;
 		break;
 	default:
 		break;
@@ -79,6 +81,14 @@ void KeyTemplet(DataType type, NodeMap* node, void* data)
 		node->typeKey = STRING;
 		node->size = strlen(data);
 		break;
+	case STACK:
+		node->data = data;
+		node->typeKey = STACK;
+		break;
+	case POINTER:
+		node->data = data;
+		node->typeKey = POINTER;
+		break;
 	default:
 		break;
 	}
@@ -116,6 +126,14 @@ void ValueTemplet(DataType type, NodeMap* node, void* data)
 		node->data = strdup(data);
 		node->typeValue = STRING;
 		node->size = strlen(data);
+		break;
+	case STACK:
+		node->data = data;
+		node->typeValue = STACK;
+		break;
+	case POINTER:
+		node->data = data;
+		node->typeValue = POINTER;
 		break;
 	default:
 		break;
@@ -175,12 +193,10 @@ void GetNodeData(Node* node, void* data)
 		*(char**)data = strdup((char*)node->data);
 		break;
 	case STACK:
-		if (node->data != NULL) {
-			*(Stack**)data = *(Stack**)node->data;
-		}
-		else {
-			*(Stack**)data = NULL;
-		}
+		*(Stack**)data = *(Stack**)node->data;
+		break;
+	case POINTER:
+		*(void**)data = *(void**)node->data;
 		break;
 	default:
 		break;
@@ -214,7 +230,7 @@ void PrintNode(Node* node)
 void FreeNode(Node* node)
 {
 	if(node == NULL) return;
-	if(node->data!=NULL)
+	if(node->data!=NULL&&node->type!=POINTER&&node->type!=STACK)
 	free(node->data);
 	free(node);
 }
@@ -296,6 +312,14 @@ void GetNodeMapData(NodeMap* node, void* data)
 	case STRING:
 		*(char**)data = strdup(node->data);
 		break;
+	case STACK:
+		if (node->data != NULL) {
+			*(Stack**)data = *(Stack**)node->data;
+		}
+		else {
+			*(Stack**)data = NULL;
+		}
+		break;
 	default:
 		break;
 	}
@@ -312,7 +336,7 @@ void PrintNodeMap(NodeMap* node)
 		printf("%f ", *(float*)node->data);
 		break;
 	case DOUBLE:
-		printf("%lf ", *(double*)node->data);		// if it crash here you may forget to get the variable by (&) refrance
+		printf("%lf ", *(double*)node->data);		
 		break;
 	case CHAR:
 		printf("%c ", *(char*)node->data);
@@ -321,6 +345,7 @@ void PrintNodeMap(NodeMap* node)
 		printf("%s ", node->data);
 		break;
 	default:
+		printf("this data type is not supported to be printed\n");
 		break;
 	}
 }
@@ -328,9 +353,9 @@ void PrintNodeMap(NodeMap* node)
 void FreeNodeMap(NodeMap* node)
 {
 	if(node == NULL) return;
-	if(node->key!=NULL)
+	if (node->key != NULL && node->typeKey != POINTER && node->typeKey != STACK)
 	free(node->key);
-	if(node->data!=NULL)
+	if (node->data != NULL && node->typeValue != POINTER && node->typeValue != STACK)
 	free(node->data);
 	free(node);
 }

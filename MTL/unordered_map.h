@@ -16,6 +16,8 @@ void GetUnordered_map(unordered_map*unordered_map,void*key,void*value);
 void RemoveUnordered_map(unordered_map*unordered_map,void*key);
 int CopyUnordered_map(unordered_map*dest,unordered_map*src);
 int FindUnordered_map(unordered_map*unordered_map,void*key);
+
+int Unordered_MapSize(unordered_map* unordered_map);
 void FreeUnordered_map(unordered_map*unordered_map);
 
 
