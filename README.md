@@ -27,6 +27,7 @@ you can do that for example
 + int StackSize(Stack* stack);
 + void FreeStack(Stack* stack);
 
+``` hash_set and vector coming soon ```
 
 ```###Queue functions###```
 
