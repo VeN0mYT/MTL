@@ -12,6 +12,7 @@ you can do that for example
  Stack*s = createStack(CHAR);
  Stack*s = createStack(STRING);
 ```
+``` hash_set and vector coming soon ```
 
 ```###Stack functions###```
 
@@ -27,7 +28,6 @@ you can do that for example
 + int StackSize(Stack* stack);
 + void FreeStack(Stack* stack);
 
-``` hash_set and vector coming soon ```
 
 ```###Queue functions###```
 
