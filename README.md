@@ -1,4 +1,4 @@
-this a library in c made to semulate the stls of c++ and work on diffrant datatypes to semulate the template of c++ but it still a prototype and not fully finished yet
+this a library in c made to semulate the STLS of c++ and work on diffrant datatypes to semulate the template of c++ but it still a prototype and not fully finished yet
 
 supported datatype for now ```INT CHAR FLOAT DOUBLE STRING STACK POINTER``` iam thinking about make the ```queue etc..``` being a datatype too.
 
