@@ -181,6 +181,28 @@ void testPTR()
 	PopStackRet(st, &get);
 	p2 = (PLAYER*)get;
 	printf("%d", p2->score);
+	free(p);
+	FreeStack(st);
+}
+
+void testPTR2()
+{
+	PLAYER* p = malloc(sizeof(PLAYER));
+	p->score = 10;
+	PLAYER* p2 = malloc(sizeof(PLAYER));
+	p2->score = 15;
+	Queue* q = createQueue(POINTER);
+	PushQueue(q, &p);
+	PushQueue(q, &p2);
+	while (!isEmptyQueue(q))
+	{
+		PLAYER* temp = NULL;
+		PopQueueRet(q, &temp);
+		printf("%d\n", temp->score);
+	}
+	free(p);
+	free(p2);
+	FreeQueue(q);
 }
 
 #endif // !TEST_H

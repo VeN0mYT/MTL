@@ -10,7 +10,7 @@ unordered_map* createUnordered_map(DataType typeKey, DataType typeValue)
 	return map;
 }
 
-int compare(DataType type, void* key1, void* key2)
+int compare_MAP(DataType type, void* key1, void* key2)
 {
 	switch (type)
 	{
@@ -78,7 +78,7 @@ void PutUnordered_map(unordered_map* unordered_map, void* key, void* value)
 	NodeMap* nodeTemp = unordered_map->Bucket[index];
 	while (nodeTemp != NULL)
 	{
-		if (compare(unordered_map->typeKey, key, nodeTemp->key))
+		if (compare_MAP(unordered_map->typeKey, key, nodeTemp->key))
 		{
 			ValueTemplet(unordered_map->typeValue, nodeTemp, value);
 			return;
@@ -99,7 +99,7 @@ void GetUnordered_map(unordered_map* unordered_map, void* key, void* value)
 	NodeMap* node = unordered_map->Bucket[index];
 	while (node != NULL)
 	{
-		if (compare(unordered_map->typeKey, key, node->key))
+		if (compare_MAP(unordered_map->typeKey, key, node->key))
 		{
 			GetNodeMapData(node, value);
 			return;
@@ -119,7 +119,7 @@ void RemoveUnordered_map(unordered_map* unordered_map, void* key)
 
 	while (node != NULL)
 	{
-		if (compare(unordered_map->typeKey, key, node->key))
+		if (compare_MAP(unordered_map->typeKey, key, node->key))
 		{
 			if (prevNode == NULL) // First node in the bucket
 			{
@@ -151,7 +151,7 @@ int FindUnordered_map(unordered_map* unordered_map, void* key)
 	NodeMap* node = unordered_map->Bucket[index];
 	while (node != NULL)
 	{
-		if (compare(unordered_map->typeKey, key, node->key)) return 1;
+		if (compare_MAP(unordered_map->typeKey, key, node->key)) return 1;
 		node = node->left;
 	}
 	if(node == NULL) return 0;

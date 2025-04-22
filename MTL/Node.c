@@ -82,12 +82,14 @@ void KeyTemplet(DataType type, NodeMap* node, void* data)
 		node->size = strlen(data);
 		break;
 	case STACK:
-		node->data = data;
+		node->key = data;
 		node->typeKey = STACK;
+		node->size = sizeof(Stack*);
 		break;
 	case POINTER:
-		node->data = data;
+		node->key = data;
 		node->typeKey = POINTER;
+		node->size = UNIDENTIFIED;
 		break;
 	default:
 		break;
@@ -130,10 +132,12 @@ void ValueTemplet(DataType type, NodeMap* node, void* data)
 	case STACK:
 		node->data = data;
 		node->typeValue = STACK;
+		node->size = sizeof(Stack*);
 		break;
 	case POINTER:
 		node->data = data;
 		node->typeValue = POINTER;
+		node->size = UNIDENTIFIED;
 		break;
 	default:
 		break;
