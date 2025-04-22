@@ -1,6 +1,8 @@
-this a library in c made to semulate the stls of c++ and work on diffrant datatypes to semulate the template of c++ but it still a prototype and not fully finished yet
+this a library in c made to semulate the STLS of c++ and work on diffrant datatypes to semulate the template of c++ but it still a prototype and not fully finished yet
 
-supported datatype for now ```INT CHAR FLOAT DOUBLE STRING``` iam thinking about make the ```stack queue etc..``` being a datatype too.
+supported datatype for now ```INT CHAR FLOAT DOUBLE STRING STACK POINTER``` iam thinking about make the ```queue etc..``` being a datatype too.
+
+```for stack and pointer types still under testing and you should push and get them by (&) even if they are a pointers too ```
 
 !!! you have to assgine value in functions by (&) like ``` PushStack(s,&m); ``` if (int m = 5;) same when get a value (int x = 0;) ```TopStack(s,&x);```
 ```
@@ -10,6 +12,7 @@ you can do that for example
  Stack*s = createStack(CHAR);
  Stack*s = createStack(STRING);
 ```
+``` hash_set and vector coming soon ```
 
 ```###Stack functions###```
 
@@ -67,4 +70,5 @@ you can do that for example
 + void RemoveUnordered_map(unordered_map* unordered_map,void* key);    
 + int CopyUnordered_map(unordered_map* dest,unordered_map* src);
 + int FindUnordered_map(unordered_map* unordered_map,void* key);
++ int Unordered_MapSize(unordered_map* unordered_map);
 + void FreeUnordered_map(unordered_map* unordered_map);
