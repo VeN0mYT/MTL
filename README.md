@@ -11,6 +11,7 @@ you can do that for example
  Stack*s = createStack(INT);
  Stack*s = createStack(CHAR);
  Stack*s = createStack(STRING);
+ Stack*s = createStack(POINTER);
 ```
 ``` hash_set and vector coming soon ```
 
